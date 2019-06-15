@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Aulas de Javascript</title>
+    <script type="text/javascript">
+     /*
+      }
+      escreverNome();
+      function escreverNome(){
+      console.log("Andre Fontenelle");
+      */
+      /*
+      function converterTemperatura(celsius){
+        var fah = (celsius * 1.8) + 32;
+        return fah;
+      }
+      console.log(converterTemperatura(30));
+      */
+      var bonus;
+      function calcularDiaria(salario,dias){
+        bonus = 300;
+        // return 2000/30;
+        // return Math.round(2000/30);
+        // return Math.ceil(2000/30); //pra cima
+        // return Math.floor(2000/30); //pra baixo
+        return (salario/dias).toFixed(2); //pra duas casas decimais
+
+      }
+      var diaria = calcularDiaria(2600,22);
+      // console.log(diaria);
+      // console.log(bonus);
+
+      var salada = ["Uva","Laranja","Abacate"];
+
+      var pesquisa = salada.indexOf("Uva");
+      // console.log(pesquisa);
+      
+      salada.sort(); //ordem de string
+
+      console.log(salada);
+
+      salada.push("Mamão");//adiciona no final
+      salada.unshift("Sal");//adiciona no inicio
+      salada.pop();//retira o ultimo elemento
+      salada.shift();//retira no inicio
+
+      // console.log('Numero de salada: ' + salada.length)
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

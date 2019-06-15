@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aplicar Grid Css</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(229, 229, 229);
+        }
+
+        article,
+        aside,
+        section,
+        header,
+        footer,
+        nav {
+            display: block
+        }
+
+        main {
+            /*width: 960px;*/
+            max-width: 960px;
+            width: 92%;
+            margin: 0 auto;
+            box-shadow: 0 0 10px #333;
+            background-color: #fff;
+        }
+
+        header {
+            /*width: 960px;*/
+            height: 110px;
+            background-color: #ff7f00;
+        }
+
+        nav {
+            /*width: 960px;*/
+            width: 100%;
+            height: 40px;
+            background-color: #b28500;
+        }
+
+        .conteudo {
+            float: left;
+            /*width: 640px;*/
+            height: 350px;
+            width: 66.66%;
+            background-color: #ffd24d;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .apoio {
+            float: right;
+            /*width: 310px;*/
+            height: 350px;
+            width: 32.29%;
+            background-color: #ddd;
+            margin-top: 10px;
+        }
+
+        footer {
+            /*width: 960px;*/
+            height: 40px;
+            width: 100%;
+            background-color: #999;
+            clear: both;
+            text-align: center;
+            line-height: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <header></header>
+        <nav></nav>
+        <section class="conteudo"></section>
+        <section class="apoio"></section>
+        <footer>Endereço, telefone e outras informações</footer>
+    </main>
+
+</body>
+
+</html>
