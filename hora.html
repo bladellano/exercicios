@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Aulas de Javascript</title>
+  <script type="text/javascript">
+
+    var agora = new Date();
+
+    function setDoisDigitos(tempo){
+      if(tempo < 10){
+        return "0" + tempo;
+      } else {
+        return tempo;
+      }
+    }
+    console.log(setDoisDigitos(agora.getHours()) + ":" + setDoisDigitos(agora.getMinutes()) + ":" + setDoisDigitos(agora.getSeconds())); 
+
+  </script>
+</head>
+<body> 
+
+</body>
+</html>
