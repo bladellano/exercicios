@@ -6,11 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Logica de Programação Javascript</title>
     <style>
+        body{
+            margin:0;
+            padding: 0;
+        }
         nav ul {
             position: fixed;
             margin: 0;
             padding: 0;
             list-style-type: none;
+            left: 7px;
+            top: 7px;
+
         }
 
         nav li {
@@ -21,10 +28,10 @@
             background-size: contain;
             margin-top: 1px;
             cursor: pointer;
-            margin-bottom: 6px;
-            box-shadow: 0 0 15px #000;
-            border-radius: 50px;
-            border: 2px solid #10ac84;
+            margin-bottom: 6px;          
+            box-shadow: 0 0 10px #444;
+            /*border-radius: 50px;*/
+            /*border: 1px solid #000;*/
 
 
         }
@@ -36,28 +43,63 @@
         nav li:nth-child(2) {
             background-image: url(ultra-ball.png);
         }
+        nav li:nth-child(3) {
+            background-image: url(pokeball.png);
+        }
+
 
         #primeira {
-            width: 300px;
+            width: 100%;
             height: 800px;
-            background-color: #10ac84;
+            background-color: #9b59b6;
         }
 
         #segunda {
-            width: 300px;
+            width: 100%;
             height: 800px;
-            background-color: #1dd1a1;
+            background-color: #f1c40f;
+        }  
+        #terceira {
+            width: 100%;
+            height: 800px;
+            background-color: #e74c3c;
         }
 
     </style>
     <script src="jquery.min.js" type="text/javascript"></script>
     <script>
         $(function(e) {
+
+            var alturaJanela = $(window).height();
+
+            function redimensionar(){
+
+                $('#primeira,#segunda,#terceira').css('height',alturaJanela);
+
+            }
+
+            $('nav li:nth-child(1)').click(function(e) {
+                $('html,body').animate({
+                    scrollTop: $('#primeira').offset().top
+                }, 1000);
+            });
+
             $('nav li:nth-child(2)').click(function(e) {
                 $('html,body').animate({
                     scrollTop: $('#segunda').offset().top
                 }, 1000);
             });
+            $('nav li:nth-child(3)').click(function(e) {
+                $('html,body').animate({
+                    scrollTop: $('#terceira').offset().top
+                }, 1000);
+            });
+
+            $(window).resize(function(event) {
+                /* Act on the event */
+            redimensionar();
+            });
+
         });
 
     </script>
@@ -68,10 +110,12 @@
         <ul>
             <li id="tela1"></li>
             <li id="tela2"></li>
+            <li id="tela3"></li>
         </ul>
     </nav>
     <div id="primeira"></div>
     <div id="segunda"></div>
+    <div id="terceira"></div>
 
 </body>
 
