@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Imagem Rotator</title>
+
+    <style>
+        #principal {
+            position: absolute;
+            clip: rect(0 200px 200px 0);
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+
+        #janela {
+            position: relative;
+            /*  relative - controlado pela div principal*/
+            height: 200px;
+            top: 0;
+            left: 0;
+        }
+
+    </style>
+    <script src="jquery.min.js"></script>
+
+    <script>
+        function moverFotos() {
+            $('#janela').animate({
+                left: "-=200"
+            }, 1000)
+        }
+
+        $(function(e) {
+            //            moverFotos();
+            setInterval(moverFotos, 2000)
+
+        })
+
+    </script>
+</head>
+
+<body>
+    <div id="principal">
+        <div id="janela">
+            <img src="imagem01.jpg">
+            <img src="imagem02.jpg">
+            <img src="imagem03.jpg">
+            <img src="imagem04.jpg">
+            <img src="imagem05.jpg">
+        </div>
+    </div>
+</body>
+
+</html>
