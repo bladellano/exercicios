@@ -10,6 +10,7 @@
         #principal {
             position: absolute;
             clip: rect(0 200px 200px 0);
+            height: 200px;
         }
 
         img {
@@ -30,16 +31,29 @@
     <script src="jquery.min.js"></script>
 
     <script>
+        var limite;
+
         function moverFotos() {
             $('#janela').animate({
-                left: "-=200"
-            }, 1000)
+                    left: "-=200"
+                }, 1000,
+                function(e) {
+                    console.log(limite);
+                    if ($("#janela").position().left == limite) {
+                        $("#janela").css('left', 0)
+                    }
+                });
         }
 
         $(function(e) {
-            //            moverFotos();
-            setInterval(moverFotos, 2000)
 
+            limite = $("#janela img").length * $("#janela img").width() * -1;
+
+            var firstImage = $("#janela img:first").attr('src');
+            $("#janela").append('<img>');
+            $("#janela img:last").attr("src", firstImage);
+
+            setInterval(moverFotos, 2000)
         })
 
     </script>
