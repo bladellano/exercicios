@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0 auto;
+            box-sizing: border-box;
+            font-family: arial;
+        }
+
+        .menu {
+            height: 40px;
+            background-color: #000;
+            color: #fff;
+
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            float: left;
+            padding: 0px 20px;
+            line-height: 40px;
+            cursor: pointer;
+
+        }
+
+        .item {
+            height: 40px;
+
+        }
+
+        .sub-item {
+            position: absolute;
+            width: 150px;
+            height: 120px;
+            background-color: #000;
+            display: none;
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="menu">
+        <ul>
+            <li class="item">
+                Home
+                <ul class="sub-item">
+                    <li><a href="">Opcao 1</a></li>
+                    <li>Opcao 2</li>
+                    <li>Opcao 2</li>
+                </ul>
+            </li>
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li class="item">
+                Menu 3
+                <ul class="sub-item">
+                    <li><a href="">Opcao 1</a></li>
+                    <li>Opcao 2</li>
+                    <li>Opcao 2</li>
+                </ul>
+            </li>
+            <li>Menu 4</li>
+        </ul>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+
+</body>
+
+</html>
