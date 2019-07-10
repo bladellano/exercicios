@@ -1,0 +1,68 @@
+$('ul[id=nav] .dir:nth-child(3) li:last').hide();
+$('ul[id=nav] .dir:nth-child(3) li').prev().css('background','red');
+$('ul[id=nav] .dir:nth-child(3) li').prev().append("<li ><spam ><a href='../aof/frmSolicSuprAprovar.php?cd_menu=431' title='Aprovar Despesa'>teste</a></spam></li>");
+
+$('ul[id=nav] .dir:nth-child(3) ul').append("<li ><spam ><a href='../aof/frmSolicSuprAprovar.php?cd_menu=431' title='Aprovar Despesa'>teste</a></spam></li>");
+
+
+RETIRA O AUTORIZAR
+$('ul[id=nav] .dir:nth-child(3) li:nth-child(5)').hide();
+
+
+$('ul[id=nav] .dir:nth-child(3) li:nth-child(5)').html("<li ><spam ><a href='../aof/frmSolicSuprAprovar.php?cd_menu=431' title='Aprovar Despesa'>Autorizar Adjunto</a></spam></li><li ><spam ><a href='../aof/frmSolicSuprAprovar.php?cd_menu=431' title='Aprovar Despesa'>Autorizar Secretaria</a></spam></li>");
+
+$('ul[id=nav] .dir:nth-child(3) li:nth-child(5)').addClass("active")
+
+
+ADICIONADO CLASSES NAS FILHAS
+$('ul[id=nav] .dir:nth-child(3) li:nth-child(5)').find('li').addClass("active")
+
+BACKGROUND
+
+$('ul[id=nav] .dir:nth-child(3) li:nth-child(5)').css(
+  {'padding-right': '20px !important',
+'background-image': 'url(../images/nav-arrow-down-p.png)',
+'background-position': '100% 0%',
+'background-repeat': 'no-repeat'}
+);
+
+
+PEGANDO URL
+$('ul[id=nav] .dir:nth-child(3) li:nth-child(5) a').attr('href')
+
+
+
+
+
+
+$('ul[id=nav] .dir:nth-child(3) li:nth-child(5)').append("<li class='active' ><spam ><a href='../aof/frmSolicSuprAutorizar.php?cd_menu=406' title='Autorizar Despesa'>Autorizar Adjunto</a></spam></li><li class='active'><spam ><a href='../aof/frmSolicSuprAutorizarSec.php?cd_menu=406' title='Autorizar Despesa'>Autorizar Secretaria</a></spam></li>");
+
+$('ul[id=nav] .dir:nth-child(3) li:last').hide();
+
+$('ul[id=nav] .dir:nth-child(3) li:nth-child(5) a:first').attr('href','#')
+
+$('ul[id=nav] .dir:nth-child(3) li:nth-child(5)').css(
+  {'padding-right': '20px !important',
+'background-image': 'url(../images/nav-arrow-down-p.png)',
+'background-position': '100% 0%',
+'background-repeat': 'no-repeat'}
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

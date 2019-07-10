@@ -1,0 +1,15 @@
+$("select option:nth-child(2)").attr('selected','true');
+$('input[type=text]').val('Lorem ipsum');
+Math.floor(Math.random()*2000);
+
+$("select option:nth-child(2)").attr('selected','true');
+$('input[type=text],textarea').val(666);
+$('#numConvenio, #numProcesso').val(123456);
+$('#numConvenio, #qnt_parcelas, #dataRepasse, #ordem-bancaria').val(12345);
+$('#anoProcesso').val(2019);
+$('#qnt_parcelas').val(3);
+$('#dataFim,#dataInicio,#dataRepasse').val('2019/08/22');
+$('#matricula,#vinculo').val(4);
+
+
+$('.container tbody tr td:nth-child(2)').text();
