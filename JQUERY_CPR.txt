@@ -1,0 +1,15 @@
+$('#txtDocOrigem').val('769087');
+$('#txtNumPaginas').val('13');
+$('#descArquivo').val('Lorem ipsum mahatan');
+$('#txtData').val('2019-07-17');
+$('input[name=email]').val('fulano@seduc.pa.gov.br');
+$('input[name=telefone]').val('(91)9999-9999');
+
+$("#ano_recebimento option:contains(2018)").attr('selected', true);
+$("#exercicio option:contains(2018)").attr('selected', true);
+$("#programa option:contains(INTEGRAL)").attr('selected', true);
+
+$('input[type=checkbox]').eq(0).attr('checked',true);
+$('input[type=checkbox]').eq(1).attr('checked',true);
+
+$('input[name=tipo_prest][value="Prestação de Contas"]').attr('checked',true);
