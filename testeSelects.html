@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Testes</title>
+	<link rel="stylesheet" href="">
+</head>
+
+<body>
+
+	<fieldset>
+		<legend>Formulário</legend>
+		<label for="programa">Programa:</label>	
+		<select name="programa" id="programa">
+			<option value="">--</option>
+			<option value="1">PDDE</option>
+			<option value="2">FEFS</option>
+			<option value="3">PDDE INTEGRAL</option>
+			<option value="4">PDE</option>
+		</select>
+		<hr>
+		<label for="programa_">Programa:</label>	
+		<select name="programa_" id="programa_">
+			<option value="">--</option>
+			<option value="1">PDDE</option>
+			<option value="2">FEFS</option>
+			<option value="3">PDDE INTEGRAL</option>
+			<option value="4">PDE</option>
+		</select>
+		<hr>
+		<label for="complemento">Complemento:</label><br>	
+		<textarea rows="4" cols="50" id="txtComplemento"></textarea>
+	</fieldset>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+	<script>
+		$(function(){
+			$('#programa').change(function(event) {
+
+				$("#programa_ option[value="+ $(this).val() +"]").prop('selected', true);	
+
+				$('#txtComplemento').val('Programa: ' + $('#programa_ option:selected').text()+'.');
+
+				travarTextarea($('#txtComplemento'));	
+
+			});			
+
+
+		});
+
+		var tamTextarea = 0;
+		var v = 0;
+
+		function travarTextarea(el){
+			v = el.val();
+			el.focus(function(event){
+				tamTextarea = el.val().length;
+				el.on('keyup',function(){
+					
+					var qtdCaracteres = el.val().length;
+					if(qtdCaracteres > tamTextarea){
+						return false;
+					} else {
+						el.val(v);
+					}
+				});
+
+			});
+		 } // fim travarTextarea
+		</script>
+	</body>
+	</html>
