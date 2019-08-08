@@ -1,0 +1,12 @@
+$('#txtMatriculasLiberadas_').attr('checked',true); - input checkbox
+$("#txtStatus_ option[value=0]").attr('selected', true); - select
+$('.ui-button-text').parent().eq(2).css('color','blue');
+
+$('input[data-despesa="36986"][data-item="4"]').not(':checked').each(function(index, el) { 
+
+	console.log( $(this).attr("name"));  
+
+});
+
+$('.ui-button-text').parent().eq(0).css({'pointer-events':'none'});
+$('.ui-button-text').eq(0).css({'color':'#ccc'});
