@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Loop Javascript</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div class="js">react</div>
+    <div class="js">angula</div>
+    <div class="js">typescript</div>
+    <div class="js">es6</div>
+</body>
+
+
+<script>
+    var js = document.getElementsByClassName('js');
+    for (let i = 0; i < js.length; i++) {
+        let texto = js[i].innerHTML;
+        js[i].innerHTML = 'Curso ' + texto + ' js';
+    }
+
+    var array = [1, 2, 3, 4, 5, 6];
+
+    /*array.forEach(function(v, i) {
+     if (i == 4) {
+     array[i] = 'Trocou valor';
+     }
+     })
+
+    console.log(array);
+    console.log('--------------------');
+*/
+    var newArray = array.map(function(e, i) { // Cria um novo array, só map tem return.
+        if (e === 3) {
+            e = 'outra coisa';
+        }
+        return e;
+    });
+
+    console.log(newArray);
+
+</script>
+
+</html>
