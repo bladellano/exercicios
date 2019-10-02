@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Map, filter e reduce</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h1>Exercício</h1>
+	
+	<script>
+		const numeros = [2,3,4,5,6,7];
+		let novoArrayNumeros = [];
+
+		for (let i = 0; i < numeros.length; i++ ){
+			novoArrayNumeros.push(numeros[i]*2);
+		}
+
+		// console.log(numeros);
+		// console.log(novoArrayNumeros);  
+		const novoArr = numeros.map(function(item, index){
+			return item * 2;
+		});
+		console.log('Map:');
+
+		const novoArrow = numeros.map(item => item * 2);//Arrow function
+
+		console.log(novoArrow);
+
+		console.log('Filter:');
+
+		let mult2 = [];
+		for (let i=0; i < numeros.length; i++){
+			if(numeros[i] % 2 === 0){
+				mult2.push(numeros[i]);
+			}
+		}
+		console.log(mult2);
+
+		const numerosFiltrados = numeros.filter(function(item,index){
+			return item % 2 === 0;
+		});
+
+		console.log(numerosFiltrados);
+
+
+		const arrayMapFilter = numeros
+		.filter(numero => numero % 2 === 0)
+		.map(numero => numero * 2.25);
+
+		console.log(arrayMapFilter);
+
+		console.log('Reduce');
+
+
+		let soma = 0;
+
+		for(let i = 0; i<numeros.length;i++){
+			soma += numeros[i];
+		}
+
+		let somaReduce = numeros.reduce(function(acc,cur){
+			return acc + cur;
+		});
+
+		console.log( soma );
+		// console.log( somaReduce );
+
+		const pessoas = [
+		{
+			nome:'Ayrton',
+			idade:27
+		},
+		{
+			nome:'João',
+			idade:22
+		},
+		{
+			nome:'Maria',
+			idade:35
+		},
+		{
+			nome:'Isa',
+			idade:31
+		},
+		{
+			nome:'Yasmim',
+			idade:13
+		},
+		{
+			nome:'Lucas',
+			idade:15
+		}
+		];
+
+		const pessoasAgrupadas = pessoas.reduce(function(acc,cur){
+			const propMaiorOuMenor = cur.idade >= 18 ? 'maiores':'menores';
+			acc[propMaiorOuMenor].push(cur);
+			return acc;
+		},{maiores:[],menores:[]});
+
+		console.log(pessoasAgrupadas);
+	</script>
+
+</body>
+</html>
